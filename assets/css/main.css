@@ -1,0 +1,337 @@
+body {
+    background-color: rgb(169, 224, 255);
+    touch-action: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.music-btn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100000;
+}
+
+/*滑块*/
+
+.sprite_global {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}
+
+.slider {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    margin-left: -23px;
+    left: 50%;
+    bottom: 10px;
+    z-index: 9999;
+}
+
+.slider span {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    top: 50%;
+    margin: -17px 0 0 -12px;
+    animation: slide_up 2s infinite ease-out;
+}
+
+.item,
+.item .box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes slide_up {
+    0%,
+    30% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -8px, 0);
+    }
+}
+
+/* Main */
+
+.say-box {
+    position: absolute;
+    top: 30%;
+}
+
+.item-22 img {
+    position: absolute;
+}
+
+.item .end1 {
+    transform: translate3d(0, 200px, 0);
+    opacity: 0;
+}
+
+.item.play .end1 {
+    opacity: 1;
+    transition: all .2s .2s ease-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.item .end2 {
+    transform: translate3d(0, 200px, 0);
+    opacity: 0;
+}
+
+.item.play .end2 {
+    opacity: 1;
+    transition: all .2s .6s ease-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.item .end3 {
+    transform: translate3d(0, 200px, 0);
+    opacity: 0;
+}
+
+.item.play .end3 {
+    opacity: 1;
+    transition: all .2s .4s ease-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.item .end4 {
+    transform: translate3d(0, 200px, 0);
+    opacity: 0;
+}
+
+.item.play .end4 {
+    opacity: 1;
+    transition: all .2s .6s ease-out;
+    transform: translate3d(0, 0, 0);
+}
+
+/* 尾页 动画 */
+
+#bg1 {
+    position: fixed;
+    background: url("../img/bg1.png") repeat 0 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-out;
+}
+
+#bg2 {
+    position: fixed;
+    background: url("../img/bg2.png") repeat 0 0;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-out;
+}
+
+.ui.button {
+    cursor: pointer;
+    /* display: inline-block; */
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    background: white;
+    color: rgba(0, 0, 0, .6);
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    /* margin: 0 .25em 0 0; */
+    padding: .78571429em 1.5em .78571429em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, .15) inset;
+    box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, .15) inset;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: opacity .1s ease, background-color .1s ease, color .1s ease, background .1s ease, -webkit-box-shadow .1s ease;
+    transition: opacity .1s ease, background-color .1s ease, color .1s ease, background .1s ease, -webkit-box-shadow .1s ease;
+    transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+    transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease, -webkit-box-shadow .1s ease;
+    will-change: '';
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vote-btn {
+    display: table;
+    /* It works, but why ???? */
+    margin: .5em auto 0 auto;
+}
+
+@keyframes shake {
+    2% {
+        transform: translate(0, 1.5px) rotate(1.5deg);
+    }
+    4% {
+        transform: translate(0, -1.5px) rotate(-0.5deg);
+    }
+    6% {
+        transform: translate(0, 1.5px) rotate(-1.5deg);
+    }
+    8% {
+        transform: translate(0, -1.5px) rotate(-1.5deg);
+    }
+    10% {
+        transform: translate(0, 2.5px) rotate(1.5deg);
+    }
+    12% {
+        transform: translate(0, -0.5px) rotate(1.5deg);
+    }
+    14% {
+        transform: translate(0, -1.5px) rotate(1.5deg);
+    }
+    16% {
+        transform: translate(0, -0.5px) rotate(-1.5deg);
+    }
+    18% {
+        transform: translate(0, 0.5px) rotate(-1.5deg);
+    }
+    20% {
+        transform: translate(0, -1.5px) rotate(2.5deg);
+    }
+    22% {
+        transform: translate(0, 0.5px) rotate(-1.5deg);
+    }
+    24% {
+        transform: translate(0, 1.5px) rotate(1.5deg);
+    }
+    26% {
+        transform: translate(0, 0.5px) rotate(0.5deg);
+    }
+    28% {
+        transform: translate(0, 0.5px) rotate(1.5deg);
+    }
+    30% {
+        transform: translate(0, -0.5px) rotate(2.5deg);
+    }
+    32% {
+        transform: translate(0, 1.5px) rotate(-0.5deg);
+    }
+    34% {
+        transform: translate(0, 1.5px) rotate(-0.5deg);
+    }
+    36% {
+        transform: translate(0, -1.5px) rotate(2.5deg);
+    }
+    38% {
+        transform: translate(0, 1.5px) rotate(-1.5deg);
+    }
+    40% {
+        transform: translate(0, -0.5px) rotate(2.5deg);
+    }
+    42% {
+        transform: translate(0, 2.5px) rotate(-1.5deg);
+    }
+    44% {
+        transform: translate(0, 1.5px) rotate(0.5deg);
+    }
+    46% {
+        transform: translate(0, -1.5px) rotate(2.5deg);
+    }
+    48% {
+        transform: translate(0, -0.5px) rotate(0.5deg);
+    }
+    50% {
+        transform: translate(0, 0.5px) rotate(0.5deg);
+    }
+    52% {
+        transform: translate(0, 2.5px) rotate(2.5deg);
+    }
+    54% {
+        transform: translate(0, -1.5px) rotate(1.5deg);
+    }
+    56% {
+        transform: translate(0, 2.5px) rotate(2.5deg);
+    }
+    58% {
+        transform: translate(0, 0.5px) rotate(2.5deg);
+    }
+    60% {
+        transform: translate(0, 2.5px) rotate(2.5deg);
+    }
+    62% {
+        transform: translate(0, -0.5px) rotate(2.5deg);
+    }
+    64% {
+        transform: translate(0, -0.5px) rotate(1.5deg);
+    }
+    66% {
+        transform: translate(0, 1.5px) rotate(-0.5deg);
+    }
+    68% {
+        transform: translate(0, -1.5px) rotate(-0.5deg);
+    }
+    70% {
+        transform: translate(0, 1.5px) rotate(0.5deg);
+    }
+    72% {
+        transform: translate(0, 2.5px) rotate(1.5deg);
+    }
+    74% {
+        transform: translate(0, -0.5px) rotate(0.5deg);
+    }
+    76% {
+        transform: translate(0, -0.5px) rotate(2.5deg);
+    }
+    78% {
+        transform: translate(0, -0.5px) rotate(1.5deg);
+    }
+    80% {
+        transform: translate(0, 1.5px) rotate(1.5deg);
+    }
+    82% {
+        transform: translate(0, -0.5px) rotate(0.5deg);
+    }
+    84% {
+        transform: translate(0, 1.5px) rotate(2.5deg);
+    }
+    86% {
+        transform: translate(0, -1.5px) rotate(-1.5deg);
+    }
+    88% {
+        transform: translate(0, -0.5px) rotate(2.5deg);
+    }
+    90% {
+        transform: translate(0, 2.5px) rotate(-0.5deg);
+    }
+    92% {
+        transform: translate(0, 0.5px) rotate(-0.5deg);
+    }
+    94% {
+        transform: translate(0, 2.5px) rotate(0.5deg);
+    }
+    96% {
+        transform: translate(0, -0.5px) rotate(1.5deg);
+    }
+    98% {
+        transform: translate(0, -1.5px) rotate(-0.5deg);
+    }
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
